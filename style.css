@@ -1,0 +1,70 @@
+h1{
+    font-size: 50px;
+}
+
+.square1,.square2,.square3,.square4,.square5{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 5px;
+    background: linear-gradient(10deg, red, blue);
+    animation-name: move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    
+}
+div:hover{
+    background: linear-gradient(70deg, yellow, green);
+}
+
+.square1{
+    animation-timing-function: ease-in;
+}
+.square2{
+    animation-timing-function: ease;  
+}
+
+.square3{
+    animation-timing-function: cubic-bezier(.05,.9,.96,.1);   
+}
+.square4{
+    animation-timing-function: cubic-bezier(.05,.9,.58,.42);
+}
+.square5{
+    animation-timing-function: cubic-bezier(.08,.9,.89,.36);
+}
+
+@keyframes move{
+    0%{
+        left: 0px;
+    }
+    50%{
+        left: 1000px;
+    }
+    100%{
+        left:0px;
+    }
+}
+
+#score{
+    position: relative;
+    animation-name: scoremove;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+@keyframes scoremove{
+    0%{
+        left: 0px;
+        color: black;
+    }
+    50%{
+        left: 1000px;
+        color: red;
+    }
+    100%{
+        left: 0px;
+        color: black;
+    }
+}
